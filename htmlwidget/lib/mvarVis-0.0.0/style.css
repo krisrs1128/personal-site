@@ -1,0 +1,48 @@
+.circle {
+    fill: #3399ff;
+    opacity: 0.8;
+    stroke: black;
+    stroke-width: .4;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #8C8C8C;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 8px;
+}
+
+table.fixed {
+    table-layout:fixed;
+    font-size: 11px;
+    font-family: "Roboto";
+    background: #B3B3B3;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    text-align: left;
+    background: white;
+}
+
+select {
+    border-radius: 0;
+    border: 0px solid;
+    font-family: "Roboto";
+    background-color: #ADDFF0
+}
+
+.mvar_container {
+    float: left;
+    overflow: hidden;
+}
+
+.mvar_text {
+   font-family: "Signika";
+}
