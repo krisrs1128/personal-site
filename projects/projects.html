@@ -3,177 +3,290 @@ layout: default
 title: Kris Sankaran
 ---
 
-<script src="../htmlwidget/lib/htmlwidgets-0.5/htmlwidgets.js"></script>
-<script src="../htmlwidget/lib/d3-3.5.2/d3.min.js"></script>
-<link href="../htmlwidget/lib/mvarVis-0.0.0/style.css" rel="stylesheet" />
-<script src="../htmlwidget/lib/mvarVis-0.0.0/setup.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/helpers.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/circle.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/arrow.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/text.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/scatter.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/colorInput.js"></script>
-<script src="../htmlwidget/lib/mvarVis-0.0.0/table.js"></script>
-<link href="../htmlwidget/lib/signika-0.0.0/signika.css" rel="stylesheet" />
-<link href="../htmlwidget/lib/roboto-0.0.0/roboto.css" rel="stylesheet" />
-<link href="../htmlwidget/lib/colorbrewer-1.0.0/colorbrewer.css" rel="stylesheet" />
-<script src="../htmlwidget/lib/colorbrewer-1.0.0/colorbrewer.js"></script>
-<script src="../htmlwidget/lib/plot_mvar_d3-binding-0.0.1/plot_mvar_d3.js"></script>
-
 <div>
     <h2 class="subtitle"> Microbiome-inspired Methodology </h2>
-    <p class="essay"> The <a href="http://statweb.stanford.edu/~susan/LAB/">Holmes</a> and
-	<a href="https://sites.google.com/site/davidrelmanlab/Home">Relman</a> groups
-	design methods and experiments to shed light on the dynamics of the human microbiome. </p>
-    <h3 class="subsubtitle">Perturbation study </h3>
+    <h3 class="subsubtitle"><a href="https://github.com/krisrs1128/microbiome_plvm/">Latent Variable Modeling</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		    Using sparse linear discriminant analysis and multiple factor analysis, we (1) assessed the effects of
-		    shocks on microbial ecology, as measured through metagenomic, 16s, and metabolomic data and (2) evaluate
-		    covariation across features that exhibit change.
-	    </td>
-	    <td>
-		<img src="../figure/pca-series-1.png" width="250px">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+                We applied probabilistic text modeling ideas to the microbiome, comparing methods and providing example workflows.
+                <ul>
+                    <li>Description: <a
+                    href="https://arxiv.org/abs/1706.04969">arxiv preprint</a>,
+                    <a
+                    href="http://statweb.stanford.edu/~kriss1/microbiome_plvm_poster.pdf">poster</a>,
+                    <a
+                    href="http://statweb.stanford.edu/~kriss1/microbiome_plvm_slides.pdf">slides</a></li>
+                    <li><a href="http://github.com/krisrs1128/microbiome_plvm">Code</a></li>
+                    <li>An informal <a
+                    href="http://statweb.stanford.edu/~kriss1/weiland/">talk</a>
+                    highlighting this work (press 'f' to advance slides)</li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/posterior_check_ts-F.png" width="250">
+ 	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"><a href="https://krisrs1128.github.io/treelapse/">treelapse</a></h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                An R package for interactive visualization of tree-structured
+                time series, based on focus / context and linked brushing ideas.
+                <ul>
+                    <li><a href="statweb.stanford.edu/~kriss1/treelapse.pdf">Preprint</a></li>
+                    <li><a href="https://krisrs1128.github.io/treelapse">Documentation</a></li>
+                    <li><a href="http://github.com/krisrs1128/treelapse">Code</a></li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/antibiotic_overview.png" width="250">
+ 	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005706">Perturbation Study</a></h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                We studied the effects of colon cleanouts on the microbiome,
+                applying novel methods to incorporate phylogenetic tree
+                structure.
+                <ul>
+                    <li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005706">Article</a></li>
+                    <li><a href="https://searchworks.stanford.edu/view/cf264md0197">Code and data</a></li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/plos.png" width="250">
+ 	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"><a href="https://f1000research.com/articles/5-1492/v2">Microbiome Workflow</a></h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                We described and provided code for a full workflow for microbiome data
+                processing and analysis.
+                <ul>
+                    <li><a href="https://f1000research.com/articles/5-1492/v2">Article</a></li>
+                    <li><a href="https://github.com/spholmes/F1000_workflow">Code and data</a></li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/f1000.png" width="250">
+ 	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"><a href="https://github.com/krisrs1128/mvarVis">mvarVis</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		Using <a href="http://www.htmlwidgets.org/">htmlwidgets</a>, we developed an R package that generates interactive
-		plots of standard multivariate analysis methods, via the <a href="http://factominer.free.fr/">FactoMineR</a>,
-		<a href="http://pbil.univ-lyon1.fr/ade4/home.php?lang=eng">ade4</a>, and
-		<a href="http://vegan.r-forge.r-project.org/">vegan</a> packages.
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-		<div id="htmlwidget_container">
-		    <div id="htmlwidget-5560" style="width:600px;height:300px;padding-top:20px;margin:auto;" class="plot_mvar_d3"></div>
-		</div>
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            Using <a href="http://www.htmlwidgets.org/">htmlwidgets</a>, we developed an R package that generates interactive
+		            plots of standard multivariate analysis methods, via the <a href="http://factominer.free.fr/">FactoMineR</a>,
+		            <a href="http://pbil.univ-lyon1.fr/ade4/home.php?lang=eng">ade4</a>, and
+		            <a href="http://vegan.r-forge.r-project.org/">vegan</a> packages.
+                <ul>
+                    <li><a href="statweb.stanford.edu/~kriss1/mvarvis_POSTER.pdf">Poster</a></li>
+                    <li><a href="http://github.com/krisrs1128/mvarVis">Code</a></li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/mvarvis.png" width="250">
+	          </td>
+	      </tr>
     </table>
-    <h3 class="subsubtitle"><a href="https://github.com/krisrs1128/phyloseqExtend">phylosequel</a></h3>
+    <h3 class="subsubtitle"><a href="https://github.com/krisrs1128/centroidview">centroidview</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We are working to extend a popular microbiome analysis pipeline (<a href="https://joey711.github.io/phyloseq/">phyloseq</a>)
-		to multi-omics data, by making it easy to import and preprocess spectral and metagenomic data sets, in addition to traditional
-		16s sequencing data.
-	    </td>
-	    <td>
-		<img src="../figure/nmr-plot.png" width="250">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+                We developed an R package for simultaneous visualization of
+                trees and heatmaps, based on linked brushing.
+                <ul>
+                    <li><a href="http://github.com/krisrs1128/centroidview">Code</a></li>
+                    <li><a href="http://statweb.stanford.edu/~kriss1/hclust.html">Example</a></li>
+                </ul>
+	          </td>
+	          <td>
+                <img src="../figure/centroidview.png" width="250">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"><a href="https://github.com/krisrs1128/structSSI">structSSI</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We created an <a href="https://cran.r-project.org/web/packages/structSSI/index.html">R package</a>
-		implementing multiple testing procedures applicable to group and hierarchically structured data, and
-		demonstrated their relevance in the microbiome setting.
-	    </td>
-	    <td>
-		<img src="../figure/structssi.png" width="150">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            We created an <a href="https://cran.r-project.org/web/packages/structSSI/index.html">R package</a>
+		            implementing multiple testing procedures applicable to group and hierarchically structured data, and
+		            demonstrated their relevance in the microbiome setting.
+	          </td>
+	          <td>
+		            <img src="../figure/structssi.png" width="150">
+	          </td>
+	      </tr>
     </table>
 </div>
 
 <hr>
 <div>
-    <h2 class="subtitle"><a href="http://stanford.edu/group/stats-for-good/">Stanford Statistics for Social Good</a></h2>
-    <p class="essay">Our overall goal is to contribute to (and learn from) efforts to promote positive social change, using the
-	methods our field has developed.</p>
-    <h3 class="subsubtitle"> <a href="http://globalonc.org">Global Oncology</a> </h3>
+    <h2 class="subtitle">Statistics and Social Good</h2>
+        <h3 class="subsubtitle"> <a
+        href="https://dssg.uchicago.edu/project/enhancing-the-distribution-of-social-services-in-mexico/">DSSG
+        + SEDESOL</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		After initial modeling results, we are developing an <a href="https://krisrs1128.github.io/OpioidAtlas">"explorable explanation"</a> to educate the public about
-		inequities in access palliative care.
-	    </td>
-	    <td>
-		<img src="../figure/global-onc.png" width="200">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+                <a href="https://dssg.uchicago.edu"Data Science for Social
+                Good</a> and <a href="https://www.gob.mx/sedesol"></a> worked
+                together to design and implement a pilot machine learning system
+                for enhancing the distribution of social services in Mexico.
+                <ul>
+                    <li><a href="https://arxiv.org/abs/1709.05551"</a>Preprint</li>
+                    <li><a href="https://dssg.uchicago.edu/project/enhancing-the-distribution-of-social-services-in-mexico/"</a>Description</li>
+                    <li><a href="https://github.com/dssg/sedesol-public"</a>Code</li>
+                </ul>
+	          </td>
+	          <td>
+		            <img src="../figure/sedesol.png" width="300">
+	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"> <a href="https://github.com/DataKind-SF/datadive_201703_supplybank">SupplyBank.Org</a> </h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                As a Data Ambassador for
+                <a="http://www.datakind.org/chapters/datakind-sf"</a>DataKind
+                San Francisco</a> I helped a volunteer team scope and develop a
+                data exploration tool for <a href="http://supplybank.org">SupplyBank.Org</a> to select
+                partner sites to distribute baby hygiene kits effectively and
+                equitably.
+                <ul>
+                    <li><a href="https://github.com/DataKind-SF/datadive_201703_supplybank">Code</a></li>
+                    <li><a href="https://datakindsfbayarea.hackpad.com/SupplyBank.org-Where-are-Infant-Care-Kits-most-needed-oygfmToC8JF">Description</a></li>
+                </ul>
+	          </td>
+	          <td>
+		            <img src="../figure/supplybank.png" width="150">
+	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"> <a href="https://krisrs1128.github.io/OpioidAtlas">Opioid Atlas</a> </h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                Stanford <a href="stanford.edu/group/stats-for-good/">Statistics
+                for Social Good</a> and the <a href="http://globalonc.org/">Global
+                Oncology Initiative</a> worked together to develop interactive
+                visualizations to educate the public about inequities in access
+                to palliative care.
+                <ul>
+                    <li><a href="https://krisrs1128.github.io/OpioidAtlas">Site</a></li>
+                    <li><a href="https://arxiv.org/abs/1612.00497">Preprint</a></li>
+                    <li><a href="https://github.com/krisrs1128/OpioidAtlas">Code</a></li>
+                </ul>
+	          </td>
+	          <td>
+		            <img src="../figure/global-onc.png" width="200">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"> <a href="http://www.indigoproject.org/">The Indigo Education Company</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We implemented a <a href=https://krisrs1128.shinyapps.io/IndigoVis/>Shiny app</a> to facilitate exploratory
-		views of student survey data, all code is on <a href="https://github.com/krisrs1128/indigoVis">github</a>.
-	    </td>
-	    <td>
-		<img src="../figure/indigo.png" width="200">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            Through Statistics for Social Good we implemented a <a
+		            href=https://krisrs1128.shinyapps.io/IndigoVis/>Shiny app</a> to
+		            facilitate exploratory views of student survey data, all code is
+		            on <a href="https://github.com/krisrs1128/indigoVis">github</a>.
+	          </td>
+	          <td>
+		            <img src="../figure/indigo.png" width="200">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"> <a href="https://transportation.stanford.edu/">Parking and Transportation Services</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		Using results from the Stanford Commute Survey, we segmented commuters who drive to work, in order to target incentives for more environmentally friendly commutes.
-	    </td>
-	    <td>
-		<img src="../figure/pts.png" width="150">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            Using results from the Stanford Commute Survey, we segmented
+		            commuters who drive to work, in order to target incentives for
+		            more environmentally friendly commutes.
+	          </td>
+	          <td>
+		            <img src="../figure/pts.png" width="150">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"> <a href="http://sparkpointcenters.org/">Sparkpoint</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We evaluated the effectiveness of financial stability and job search programs at SparkPoint drop-in centers located throughout the SF Bay Area.
-	    </td>
-	    <td>
-		<img src="../figure/sparkpoint.png" width="150">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            We evaluated the effectiveness of financial stability and job
+		            search programs at SparkPoint drop-in centers located throughout
+		            the SF Bay Area.
+	          </td>
+	          <td>
+		            <img src="../figure/sparkpoint.png" width="150">
+	          </td>
+	      </tr>
+    </table>
+    <h3 class="subsubtitle"> <a href="https://www.kaggle.com/c/afsis-soil-properties">Africa Soil Property Prediction</a> </h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                Our team from Statistics for Social Good placed in the top 11% in this kaggle competition.
+	          </td>
+	          <td>
+		            <img src="../figure/africa_soil.png" width="150">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"> <a href="http://greatnonprofits.org/">Great Nonprofits</a> </h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We investigated the extent of "courtesy bias" in online nonprofit reviews, and shared
-		<a href="http://ssir.org/articles/entry/the_surprising_truth_behind_beneficiary_feedback"">our results</a> with the Stanford Social Innovation Review.
-	    </td>
-	    <td>
-		<img src="../figure/gnp.png" width="200">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            We investigated the extent of "courtesy bias" in online
+		            nonprofit reviews, and shared <a
+		            href="http://ssir.org/articles/entry/the_surprising_truth_behind_beneficiary_feedback"">our
+		            results</a> with the Stanford Social Innovation Review.
+	          </td>
+	          <td>
+		            <img src="../figure/gnp.png" width="200">
+	          </td>
+	      </tr>
     </table>
 </div>
 
 <hr>
 <div>
-    <h2 class="subtitle">Academic Collaborations</h2>
+    <h2 class="subtitle">Other Academic Collaborations</h2>
     <h3 class="subsubtitle"><a href="https://nems.stanford.edu">Stanford NEMS</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We are implementing algorithms to detect cytokine mixtures using data from novel nanoscale sensors.
-	    </td>
-	    <td>
-		<img src="../figure/qbt.png" width="200px">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            We designed algorithms to detect cytokine mixtures using data from novel nanoscale sensors.
+	          </td>
+	          <td>
+		            <img src="../figure/qbt.png" width="200px">
+	          </td>
+	      </tr>
     </table>
     <h3 class="subsubtitle"><a href="http://hivdb.stanford.edu/">Stanford HIV Database</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		We adapted local FDR methods to perform inference of APOBEC mutations, and shared the
-		technique in an <a href="https://cran.r-project.org/web/packages/LocFDRPois/index.html">R package</a>.
-	    </td>
-	    <td>
-		<img src="../figure/hiv.png" width="120px">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            We adapted local FDR methods to perform inference of APOBEC mutations.
+                <ul>
+                    <li><a href="https://hivdb.stanford.edu/pages/pdf/Rhee.2016.JVI.pdf">Article</a> </li>
+                    <li><a href="https://cran.r-project.org/web/packages/LocFDRPois/index.html">R
+                        package</a> including local FDR methodology.</li>
+                </ul>
+	          </td>
+	          <td>
+		            <img src="../figure/hiv.png" width="120px">
+	          </td>
+	      </tr>
     </table>
 </div>
 
@@ -183,38 +296,44 @@ title: Kris Sankaran
     In the past, I've worked on industry consulting projects and internships.
     <h3 class="subsubtitle"><a href="https://www.climate.com/">Climate Corporation</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		As an intern, I implemented a bayesian approach rainfall disaggregation, in order to
-		incorporate a large amount of lower-resolution data into the company's forecasting pipeline.
-	    </td>
-	    <td>
-		<img src="../figure/climate.png" width="150px">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            As an intern, I implemented a bayesian approach rainfall disaggregation, in order to
+		            incorporate a large amount of lower-resolution data into the company's forecasting pipeline.
+	          </td>
+	          <td>
+		            <img src="../figure/climate.png" width="150px">
+	          </td>
+	      </tr>
     </table>
 </div>
 
 <hr>
 <div>
     <h2 class="subtitle">Other</h2>
+    <h3 class="subsubtitle"><a href="">Statistics Consulting Notes</a></h3>
+    <table>
+	      <tr>
+	          <td class="essay">
+                As an instructor for Stats 390 (Summer 2017), I prepared a <a href="https://www.overleaf.com/10240923zrkwyvndkwnn#/37916755/">cheat
+                sheet</a> to help statistical consultants get up to speed about
+                methods that are widely used in applications. </td>
+        </tr>
+    </table>
     <h3 class="subsubtitle"><a href="https://www.stanfordesp.org/">Stanford Educational Program Lecture Notes</a></h3>
     <table>
-	<tr>
-	    <td class="essay">
-		I've organized a few short lectures on probability and statistics for middle and high school students. These are the notes I prepared.
-		<ul>
-		    <li><a href="splash_fall_2010.pdf">Fall 2010</a> </li>
-		    <li><a href="splash_spring_2011.pdf">Spring 2011</a> </li>
-		</ul>
-	    </td>
-	    <td style="padding-right:10px;">
-		<img src="../figure/splash.png" width="150px">
-	    </td>
-	</tr>
+	      <tr>
+	          <td class="essay">
+		            I've organized a few short lectures on probability and statistics for middle and high school students. These are the notes I prepared.
+		            <ul>
+		                <li><a href="splash_fall_2010.pdf">Fall 2010</a> </li>
+		                <li><a href="splash_spring_2011.pdf">Spring 2011</a> </li>
+		            </ul>
+	          </td>
+	          <td style="padding-right:10px;">
+		            <img src="../figure/splash.png" width="150px">
+	          </td>
+	      </tr>
     </table>
 </div>
-
-<script type="application/json" data-for="htmlwidget-5560">{"x":[{"data":{"axis1":[0.342838858759918,-1.85036078954524,-0.934207068799932,-4.99720565317693,2.76587926620954,1.1012865897485,1.70654298100021,0.0182696926036133,0.0672739509977125,-1.25621698128878,0.925773077160545,1.25092791089849,2.20131170209404,1.98558237099581,1.34348901259939,0.617616306632068,1.48253010465771,-0.165707578303682,-5.32265659245312,-0.645258900385923,-0.637708260403934],"axis2":[-0.705491779231816,-1.68243999366506,-0.846155440380646,0.547223394189259,0.330232114753046,-0.337130878960917,-0.0854179990220816,0.742205339332707,-0.322625360367156,-0.473570344431085,0.268404505995077,0.743200598104507,-0.719327975721759,-0.441051467988362,-0.306969522975265,-1.02024370296533,-0.693803500931603,-0.711865752089764,-1.06586220382862,3.33379033225544,3.44689963792942],"axis3":[0.827022920935651,1.43592488881657,0.185684158125589,0.041990504336071,-0.750632273476349,0.447518632313057,-0.408032301823265,1.88383318884145,-0.45152218715103,-0.719404728397706,-0.553383408513408,-0.370487219770425,0.253653202643108,0.404625620555662,0.130423210728928,-0.546557966710031,-0.702417098401131,-0.218255383486354,-0.925060128589296,-1.15301058228057,1.18808695130349],"label":["2EL ","1CHA","1FON","1VAU","1DAM","2BOU","1BOI","3EL ","DOM1","1TUR","4EL ","PER1","2DAM","1POY","1ING","1BEN","2BEA","1ROC","2ING","T1  ","T2  "],"Label":["Saumur","Saumur","Bourgueuil","Chinon","Saumur","Bourgueuil","Bourgueuil","Saumur","Chinon","Saumur","Saumur","Saumur","Saumur","Saumur","Bourgueuil","Bourgueuil","Chinon","Chinon","Bourgueuil","Saumur","Saumur"],"Soil":["Env1","Env1","Env1","Env2","Reference","Reference","Reference","Env1","Env1","Env2","Env2","Env2","Reference","Reference","Env1","Reference","Reference","Env2","Env1","Env4","Env4"]},"type":"point"},{"data":{"axis1":[0.462243855632973,0.822605109769925,0.701683716984796,0.483145918106329,-0.0831312410640204,0.833806651304304,0.814446684248095,0.928710868762386,0.527751522521265,0.840986918777411,0.767305676305248,0.287252379082918,0.16913204038971,-0.613090332628435,0.32237725334045,0.88911098315388,0.904836116043104,0.826298844349855,0.86106332689671,-0.235484570398456,0.719069829002551,0.744811497584375,0.863193577964202,0.908286531835132,0.280998262474603,0.922607953627832,0.945194076312207,0.842434547615222,0.855302967255265],"axis2":[0.772055996439985,0.0842890177757259,0.013052168642632,-0.314314735111772,0.82884543859698,0.372731350120563,0.366722846970692,0.204797098719369,0.666815345353686,-0.263586281687049,-0.188868749839171,-0.573691701219937,0.725758085069668,0.555482920964228,0.356473788107139,0.166837036276103,0.221953910044696,-0.427410214214718,0.12262492639643,0.35464609796022,0.570991710431611,0.288150588988121,-0.410866638506107,-0.320127676648139,0.678379417071401,0.1522369523645,-0.131254476774053,-0.407491499897085,-0.364022206600498],"axis3":[-0.0199236062224722,-0.376735667536848,-0.569808695535618,0.579350566464799,0.188588395778254,0.137061414345423,0.13746946507258,-0.0412011910818416,0.216101739493276,-0.256185226483945,-0.523112831858487,0.613456763840125,0.0329742507275318,0.0412526310027592,0.214569469610939,-0.108460437034847,0.174455424553561,-0.0816198994033947,0.207769947760403,-0.306287246476643,0.190614279370091,-0.104118506487589,0.0583925533162653,0.113879176309794,0.126659053128153,0.1175962248594,0.163879486926248,0.119442121863748,0.0152321960934216],"label":["Odor.Intensity.before.shaking","Aroma.quality.before.shaking","Fruity.before.shaking","Flower.before.shaking","Spice.before.shaking","Visual.intensity","Nuance","Surface.feeling","Odor.Intensity","Quality.of.odour","Fruity","Flower","Spice","Plante","Phenolic","Aroma.intensity","Aroma.persistency","Aroma.quality","Attack.intensity","Acidity","Astringency","Alcohol","Balance","Smooth","Bitterness","Intensity","Harmony","Overall.quality","Typical"],"ix":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]},"type":"arrow"}],"evals":[]}</script>
-<script type="application/htmlwidget-sizing" data-for="htmlwidget-5560">{"viewer":{"width":600,"height":300,"fill":false},"browser":{"width":600,"height":300,"fill":false}}</script>
 </html>
