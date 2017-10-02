@@ -1,0 +1,216 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+
+% Set your name here
+\def\name{Kris Sankaran}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand\myshade{85}
+\colorlet{mylinkcolor}{violet}
+\colorlet{mycitecolor}{YellowOrange}
+\colorlet{myurlcolor}{Aquamarine}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  linkcolor = mylinkcolor!\myshade!black,
+  citecolor = mycitecolor!\myshade!black,
+  urlcolor = myurlcolor!\myshade!black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=0.7in,
+  top=0.7in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  Stanford University \\
+  Department of Statistics \\
+  390 Serra Mall \\
+  Stanford, CA 94305
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Email: & \href{mailto:krissankaran@stanford.edu}{\tt krissankaran@stanford.edu} \\
+    Homepage: & \href{http://stanford.edu/\textasciitilde kriss1}{\tt https://stanford.edu/\textasciitilde kriss1/} \\
+    Code: & \href{https://github.com/krisrs1128}{\tt https://github.com/krisrs1128}
+  \end{tabular}
+\end{minipage}
+
+\section*{Education}
+Stanford University
+\begin{itemize}
+  \item PhD Statistics, 2013 - 2018 (expected)
+  \item MA Statistics, 2012 - 2013
+  \item BS Mathematics, 2009 - 2013
+\end{itemize}
+
+\section*{Professional Experience}
+\begin{itemize}
+\item \textit{Statistical Consulting Workshop Instructor} \\
+  Summer 2017 \\
+  Stanford University Department of Statistics
+%% \item \textit{Strategies and Techniques for Analyzing Microbial Population Structures TA}
+%%   August 2017 \\
+%%   Marine Biological Laboratory, Woods Hole
+\item \textit{Data Science for Social Good Fellowship} \\
+  Summer 2016 \\
+  Center for Data Science and Public Policy, University of Chicago
+\item \textit{Quantitative Research Intern} \\
+  Summer 2012 \\
+  The Climate Corporation
+\end{itemize}
+
+\section*{Expertise}
+\begin{itemize}
+\item Machine Learning Methods and Pipelines: luigi (python), caret (R),
+  postgresql (SQL), scikitlearn (python)
+\item Statistical Modeling and Inference: R, stan, Mamba (julia), Rcpp (R and C++)
+\item Data Preparation: Tidyverse (R), Bioconductor (R), pandas (python), bash,
+  spacemacs (emacs / vim)
+\item Data Visualization: D3 (javascript), HTMLWidgets (R and Javascript), Shiny
+  (R), ggplot2 (R)
+\end{itemize}
+\section*{Preprints and Publications}
+\begin{itemize}
+  \item Methods
+\begin{itemize}
+\item Sankaran, Kris, and Susan P. Holmes. ``Latent Variable Modeling for the
+  Microbiome.'' arXiv preprint arXiv:1706.04969 (2017).
+\item Sankaran, Kris and Susan P. Holmes ``Interactive Visualization of
+  Hierarchically Structured Data.'' Accepted to Journal of Computational and
+  Graphical Statistics (2017).
+\item Sankaran, Kris, and Susan P. Holmes. ``structSSI: Simultaneous and Selective
+  Inference for Grouped or Hierarchically Structured Data.'' Journal of
+  Statistical Software 59, no. 13 (2014): 1.
+\end{itemize}
+\item Applications
+  \begin{itemize}
+  \item Sankaran, Kris, et al. ``Applying Machine Learning Methods to Enhance the
+    Distribution of Social Services in Mexico.'' arXiv preprint arXiv:1709.05551
+    (2017).
+  \item Fukuyama, Julia, Laurie Rumker, Kris Sankaran, Pratheepa Jeganathan, Les
+    Dethlefsen, David A. Relman, and Susan P. Holmes. ``Multidomain analyses of a
+    longitudinal human microbiome intestinal cleanout perturbation experiment.''
+    PLOS Computational Biology 13, no. 8 (2017): e1005706.
+  \item Callahan, Ben J., Kris Sankaran, Julia A. Fukuyama, Paul J. McMurdie, and
+    Susan P. Holmes. ``Bioconductor workflow for microbiome data analysis: from
+    raw reads to community analyses.'' F1000Research 5 (2016).
+  \item Sankaran, Kris, Suzanne Tamang, and Ami Bhatt. "Opioid Atlas: Mapping
+    Access to Pain Medication." arXiv preprint arXiv:1612.00497 (2016).
+  \item Rhee, Soo-Yon, Kris Sankaran, Vici Varghese, Mark Winters, Christopher B.
+    Hurt, Joseph J. Eron, Neil Parkin, Susan P. Holmes, Mark Holodniy, and Robert
+    W. Shafer. ``HIV-1 Protease, Reverse Transcriptase, and Integrase Variation.''
+    Journal of Virology (2016): JVI-00495.
+  \item Sankaran, Siva, and Kris Sankaran. ``Improving Online Course Performance
+    Through Customization: An Empirical Study Using Business Analytics.''
+    International Journal of Business Analytics (IJBAN) 3, no. 4 (2016): 1-20.
+  \end{itemize}
+\end{itemize}
+
+\section*{Ongoing Projects}
+Manuscripts available upon request.
+\begin{itemize}
+  \item \textit{Inference of Dynamic Regimes in the Microbiome} \\
+    Partitioning microbial time series into distinct regimes, using variants of
+    HMMs, GPs, and switching state space models.
+  \item \textit{Multitable Data Analysis of the Microbiome} \\
+    Studying the relationship between body fat distribution and microbiome
+    communities, using matrix decomposition and probabilistic methods.
+  \item \textit{Suicide Ideation among Chinese Vocational School Students} \\
+    Identifying patterns of behavior associated with suicide ideation to design
+    potential interventions.
+\end{itemize}
+
+\section*{Service}
+
+\begin{itemize}
+\item Reviewer for \textit{Biostatistics}, \textit{The Journal of the American Statistical Association} \\
+  2016 - Present
+\item DataKind SF Chapter Core Volunteer \\
+  2016 - 2017
+\item Stanford Statistics for Social Good \\
+  2013 - 2017
+\end{itemize}
+
+\section*{Recognition}
+\begin{itemize}
+\item Ric Weiland Graduate Fellowship, 2016 - present
+\item \href{https://undergrad.stanford.edu/programs/pwr/publications-prizes-and-awards/boothe-prize-essays}{Boothe Prize} for Excellence in Writing (Top 6 freshman papers), 2010
+\end{itemize}
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
