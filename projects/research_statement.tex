@@ -1,0 +1,223 @@
+\documentclass{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\title{Research Statement}
+\author{Kris Sankaran}
+
+\begin{document}
+\maketitle
+
+During my PhD, I have done research to streamline and democratize statistical
+analysis of microbiome data. This has involved three complementary types of
+work,
+\begin{itemize}
+\item Designing example workflows: There are many approaches possible at each
+  step in the microbiome analysis pipeline, from raw data to scientific
+  inferences, but few references for how to assemble these steps into a coherent
+  workflow. Our work in \citep{Callahan2016, Fukuyama2017} offer some basic
+  guideposts.
+\item Developing software packages: Sometimes the same conceptually complex or
+  time-consuming task appears repeatedly across collaborative projects. This has
+  motivated the creation of packages to simplify these difficult steps,
+  including \texttt{structSSI} \citep{sankaran2014structssi}, \texttt{mvarVis},
+  \citep{mvarvis}, \texttt{treelapse} \citep{Sankaran2017}, and
+  \texttt{centroidview} \citep{centroidview}.
+\item Distilling relevant literature: Sometimes the barrier to effective analysis is not
+  hands-on implementation of a workflow, but knowledge of which methods are
+  relevant and effective. This is especially the case for more specialized
+  analysis questions, and motivated our reviews in
+  \citep{sankaran2017latent}.
+\end{itemize}
+
+This research direction has been driven by on-the-ground experience
+collaborating with researchers interested in the basic science and clinical
+consequences of variation in the human microbiome. I have tried to develop tools
+and write reviews that can make these day-to-day collaborations easier. In the
+process, I have found ideas from the data visualization, probabilistic modeling,
+and structured regularization literatures to be particularly useful, and they
+appear frequently in my contributions. Further, we have consistently ensured
+that all our studies are reproducible, sharing code on github and making data
+publicly available.
+
+\section{Workflows}
+
+The workflow papers \citep{Callahan2016, Fukuyama2017} describe techniques for
+navigating different stages of microbiome analysis, for general and longitudinal
+settings, respectively. \cite{Callahan2016} is a tutorial for generating and
+analyzing count matrices obtained from raw 16s sequencing data associated with a
+small mouse microbiome experiment. The construction of count matrices is
+accomplished using \texttt{dada2} \citep{callahan2016dada2}, while the analysis
+section reviews various dimensionality reduction and testing approaches suited
+to microbiome data. Since the data are sparse, high-dimensional, and rich in
+phylogenetic information, proper analysis requires great care. In addition to
+descriptions and examples of high-level techniques, we describe several
+``tricks'' that we have found useful in past collaborations, for example,
+diagnostics to guide filtering and transformation of species counts.
+
+\cite{Fukuyama2017} is similar to \cite{Callahan2016} in its focus on sharing
+code for an end-to-end workflow for microbiome analysis, but is specialized to a
+perturbation study design, includes metagenomic and metabolomic data, and
+discusses novel biological findings. The purpose of this study is to understand
+changes in the microbiome induced by a colon cleanout, which is analogous to a
+flash flood in classical ecology theory, in that it clears out an ecosystem and
+frees it for recolonization. Further, in order to understand the effect of this
+perturbation, it is useful to have contextual information on natural variability
+in the microbiome outside of these perturbations, and the study design reflects
+that. Our work describes techniques for this more specialized setting, like
+regularized CCA and adaptive gPCA, a method developed by a former lab member
+\citep{fukuyama2017adaptive}.
+
+\section{Software packages}
+
+To facilitate the kinds of analysis useful in our workflow studies, we have
+designed and developed several \texttt{R} packages. One of our first efforts was
+\texttt{structSSI} \citep{sankaran2014structssi}, a package implementing group
+and hierarchical multiple testing procedures. Group and hierarchical multiple
+testing is useful in the microbiome setting because it is often the case that
+species that are phylogenetically related to one another have similar responses
+to environmental changes. This phylogenetic information is directly available,
+and can be used to improve power when testing. However, before
+\citep{sankaran2014structssi}, group and hierarchical testing schemes developed
+in the statistics literature had not been applied to microbiome data. By
+implementing several methods in an \texttt{R} package, writing an accessible
+discussion of the inferential properties of these testing schemes, and supplying
+many example tests, we made it possible for researchers in the microbiome to
+make use of modern multiple testing techniques.
+
+Another collection of packages made use of data visualization concepts to ease
+pain-points in microbiome data analysis. The first of these, \texttt{mvarVis},
+streamlines the creation and interpretation of multivariate analysis ordination
+techniques \citep{mvarvis}. Ordinations are often used in microbiome research to
+provide a low-dimensional representation of the relationship between samples and
+species abundances, but to be useful, they need to be annotated by supplemental
+information, such as taxonomic membership for species or treatment status for
+samples. Since different ordination techniques are implemented across various
+packages, each with its own interface, this means custom code needs to be
+written for each type of ordination and annotation. \texttt{mvarVis} provides a
+common interface to ordination methods across multiple packages, along with
+shared plotting methods. Among these plotting methods are interactive
+visualizations, which allow rapid cycling through different types of annotation.
+
+The package \texttt{treelapse} addresses the problem of comparing time series
+that can be arranged hierarchically \citep{Sankaran2017}. This is useful in the
+microbiome context because it is often of interest to compare species abundance
+trajectories across an experiment between phylogenetic groups. For example,
+species may respond differently to antibiotic treatments, with some having
+become resistant. \texttt{treelapse} borrows the focus-plus-context and linked
+brushing ideas, common in the data visualization literature, to make it easy to
+ask which parts of a tree contain trajectories of a given shape. Conversely, it
+also allows querying subsets of a tree to see what trajectories match those
+nodes. This interactivity greatly speeds up the process of exploring species
+dynamics, which can otherwise involve printing hundreds of species trajectory
+plots.
+
+The package \texttt{centroidview} offers a different take on the subtree
+visualization problem, more directly suited to the problem of comparing
+centroids corresponding to subtrees in a hierarchical clustering. It provides a
+few additional visual elements -- color, a heatmap, and comparison barplots --
+that enrich a \texttt{treelapse}-type display for characterizing clusters at
+different levels of granularity.
+
+\section{Literature surveys}
+
+In contrast to workflow papers and software packages, the purpose of our
+literature surveys is to address limitations in exposure to and understanding of
+literature relevant to specific microbiome data analysis problems, rather than
+barriers in technical implementation. A first effort towards distillation of
+statistics literature relevant to microbiome applications is
+\citep{sankaran2017latent}, which borrows techniques from text analysis to
+provide probabilistic representations of a sample-by-species abundance matrix,
+which we view as analogous to a document-term matrix. While the analogy between
+document-term and species abundance matrices had been observed before, the only
+previous papers applying text analysis models to the microbiome failed to
+visualize model output (focusing on test performance instead) or provide code
+and data.
+
+While \citep{sankaran2017latent} considers the generic microbiome dimensionality
+reduction problem, \citep{sankaran2017inference, sankaran2017survey} describe
+approaches to two more specialized problems that arise in microbiome analysis:
+regime detection and multitable analysis. In regime detection, the question is
+to identify time segments where species trajectories switch behavior, due to
+antibiotic treatment or diet change, for example. Further, there is interest
+here in characterizing subsets of species with similar changes in dynamics. In
+our survey, we describe statistical and machine learning techniques, including
+those based on regression trees, Bayesian nonparametric Hidden Markov Models,
+Gaussian Processes, and changepoint detection. We discuss differences in
+underlying assumptions, modeling performance, computational efficiency, and
+types of output made available.
+
+The survey in \citep{sankaran2017survey} reviews the problem of relating several
+tables two one another, motivated by an application to a study comparing body
+fat composition to bacterial counts, with interest in connections between the
+microbiome and host metabolism. If there were only one summary of body fat --
+for example, BMI -- this is simply a high-dimensional regression problem.
+However, this study provides fat and muscle mass measurements at various
+locations across the body, in order to provide a richer portrait of body fat
+composition than simply BMI. There are many proposals for studying such
+multitable data, developed across various literatures, including statistics,
+ecology, and machine learning, for example. Our work provides a unified review,
+along with applications to the body composition data, with the same overall
+goals of comparison and distillation as \citep{sankaran2017inference}. For
+example, we discuss Canonical Correlation Analysis and Partial Least Squares
+(and their regularized counterparts), exponential family CCA, and multitask
+learning, among other methods. Ultimately, we hope that these reviews become an
+approachable and practically useful guide for researchers facing similar
+problems in microbiome data analysis.
+
+\section{Service}
+
+In addition to microbiome-related research, I have volunteered on multiple
+data-for-good projects, through Statistics for Social Good at Stanford, the San
+Francisco chapter of DataKind, and a Data Science for Social Good fellowship
+through the University of Chicago. I have found that skills and perspective
+cultivated through microbiome research transfer surprisingly well to social good
+projects. In particular, in both types of work, I aim to help experts do their
+jobs better, through improved workflows, tools, and expositions on statistical
+formulation. In fact, this volunteer work can be more challenging, since many of
+the government institutions and nonprofits we collaborate with haven't
+used data extensively, at least traditionally.
+
+Most of these service projects fall into two categories, namely (1) developing
+tools to explore otherwise inaccessible data and (2) designing systems that
+match services to participants in a (somehow) optimal way. Examples of the first
+type of project are the Opioid Atlas, which visualizes historical patterns of
+opioid access, which reflect inequities in palliative care, the SupplyBank.org
+viewer, an application describing supply and demand for welfare resources in the
+San Francisco Bay Area, and IndigoVis, a application to compare student
+personality surveys with academic performance.
+
+Examples of then second type of project are a collaboration with SEDESOL, the
+social development agency in Mexico, to better match government services to
+populations in need, based on a multidimensional poverty index, a project with
+SparkPoint to identify whether certain combinations of employment training
+programs exhibited synergistic effects, and a project with Stanford Parking and
+Transportation, to determine a market segmentation for encouraging more Stanford
+students and workers to use public transportation or carpools in their commutes.
+I think of these projects as exercises in responsible citizenship, using the
+knowledge I have acquired through my education.
+
+\section{Future Work}
+
+I enjoy working on a blend of workflow design, literature distillation, and
+package development, motivated by real scientific problems. Ultimately, my goal
+is to empower data analysis practitioners in their day-to-day work. My past
+studies in the microbiome have given me perspective about the most relevant
+statistical questions in this field, along with pain-points associated with
+answering these questions, and it would be worthwhile to develop accessible
+tools to resolve them. For example, even once multitable and regime detection
+models become easy to apply, interactive visualization of results could greatly
+facilitate interpretation. Further, working on the microbiome has given me
+exposure to general genomics concepts, and I have an interest in applying my
+perspective to other types of 'omics data, especially single-cell genomic data,
+which often has structure similar to the microbiome with its zero-inflation,
+high-dimensionality, and heterogeneity. I believe my depth of knowledge in
+statistics, visualization, and modeling will allow me to contribute valuably to
+modern, data-intensive biology problems as new technologies and types of
+scientific questions arise over the years.
+
+\bibliographystyle{plainnat}
+\bibliography{refs.bib}
+
+\end{document}
