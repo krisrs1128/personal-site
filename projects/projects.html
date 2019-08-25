@@ -5,7 +5,40 @@ title: Kris Sankaran
 
 <div>
     <h2 class="subtitle"> Humanitarian AI </h2>
-    <h3 class="subsubtitle"> <a href=""> Remote Sensing </a></h3>
+    <h3 class="subsubtitle">Community</h3>
+    <table>
+     <tr>
+       <td>
+         We've been trying to create more opportunities for people to contribute
+         to humanitarian AI projects. The term can be quite broad, which makes
+         it important that work is coordinated across teams, to maintain
+         coherence.
+         <ul>
+         <li> Workshops: I've been lucky to contribute to the organization of
+           the <a href="https://aiforsocialgood.org">AI for Social Good</a>
+           workshops at ICLR and ICML, the <a href="http://cv4gc.org">Computer
+           Vision for Global Challenges workshop</a> at CVPR, and the <a
+           href="http://ml4d">Machine Learning for Development</a> workshop at
+           NeurIPS. </li>
+        <li> <a href="">Internships</a>: Mila hosts internships specifically
+           around humanitarian AI projects, and I've been fortunate to work with
+           some really wonderful students through the program. </li>
+        <li> <a href="https://github.com/krisrs1128/humanitarian-ai">Reading
+           group</a>: We organized a reading group on this topic, to help
+           students at Mila share the types of projects they were interested in.
+         </li>
+         <li> Review materials: I created this <a href="docs">summary</a> and
+           this <a href="docs">spreadsheet</a> as a reference for people who want
+           to learn more about social applications of data science and machine
+           learning.
+         </li>
+         </ul>
+       </td>
+       <td><img src=""></td>
+     </tr>
+    </table>
+
+    <h3 class="subsubtitle"> Remote Sensing </h3>
     <table>
       <tr>
         <td class="essay">
@@ -15,7 +48,7 @@ title: Kris Sankaran
           improved methodology.
           <ul>
             <li> <a href="https://github.com/ElementAI/HighRes-net">Multiframe
-            Super-resolution</a>: With a team from Element AI, we have
+            super-resolution</a>: With a team from Element AI, we have
             experimented with approaches to align and fuse low-resolutions
             imagery, inspired by the observation that, while high-resolution
             data are often expensive, low-resolution views are often plentiful.
@@ -25,49 +58,55 @@ title: Kris Sankaran
             providing locations of bridges, to provide better foundational data
             for disaster preparedness planning.
             </li>
-            <li> <a href=""> Interactivity</a>: Mapping data are often very
-            heterogeneous, so even the best models tend to require human
-            validation before being used in the field. This study considers some
-            approaches to interactively refining preliminary outputs, using weak
-            supervision on prediction masks.
+            <li> <a href="IJCAI_AI4G_Submission.pdf"> Interactivity</a>: Mapping
+              data are often very heterogeneous, so even the best models tend to
+              require human validation before being used in the field. This
+              study considers some approaches to interactively refining
+              preliminary outputs, using weak supervision on prediction masks.
             </li>
-            <li> <a href="">Interpretability</a>: Remote sensing models hold the
-            potential to transform a few types of socially relevant monitoring
-            efforts, from poverty prediction to deforestation tracking. These
-            studies explore the use of Concept Activation to make these models
-            more accessible to the domain experts who use them. </li>
+            <li> <a href="https://www.overleaf.com/project/5cd5c142489f6b03b1e5fa67">
+              Interpretability </a>: Remote sensing models hold the potential to
+              transform a few types of socially relevant monitoring efforts,
+              from poverty prediction to deforestation tracking. These studies
+              explore the use of Concept Activation to make these models more
+              accessible to the domain experts who use them.</li>
           </ul>
         </td>
-        <td><img src="../figure/"></td>
+        <td><img src="../figure/interactive_mapping.png" width="250"></td>
       </tr>
-    <h3 class="subsubtitle"> <a href=""> Climate Change </a></h3>
+    </table>
+    <h3 class="subsubtitle"> Climate Change </h3>
     <table>
       <tr>
         <td class="essay">
+          From detecting leaks in methane pipes to accounting for uncertainty in
+          future reservoir loads, machine learning has the potential to amplify
+          a wide variety of (big and small) climate change mitigation and
+          adaptation efforts.
           <ul>
-            <li></li>
+            <li><a href="http://climatechange.ai">Climate Change AI</a>: This
+              initiative includes researchers across continents and research
+              domains, brought together by the vision of a low-carbon future
+              supported by thoughtful machine learning research and
+              applications. You should join the mailing list! </li>
+            <li><a href="https://arxiv.org/abs/1906.05433">Review paper</a>:
+              This paper provides a structure for thinking about climate change
+              and machine learning. The hope is that this taxonomy helps guide
+              closer connections between researchers in mitigation and
+              adaptation domains and methodological practitioners. </li>
+            <li>Applications</a>: Aside from the CCAI initiative, our team at
+              Mila has been investigating a few of the problems highlighted in
+              the review, including <a href="http://climatechange.ai/icml2019/">
+              predictive maintenance</a> for wind farms, <a
+              href="https://github.com/isrugeek/climate_extreme_values"">
+              modeling extremes</a> in time series, and communication of
+              long-term <a href="https://arxiv.org/abs/1905.03709"> climate
+              change impacts </a>. </li>
           </ul>
         </td>
-        <td><img src=""></td>
+        <td><a href="http://climatechange.ai"><img width="150" src="../figure/ccai.png"></a></td>
       </tr>
     </table>
-
-    <h3 class="subsubtitle"><a href="">Other</a></h3>
-    <table>
-     <tr>
-       <td>
-         <ul> Reading group </ul>
-         <ul> Review materials </ul>
-       </td>
-       <td><img></td>
-     </tr>
-
-    https://www.climatechange.ai/
-    https://arxiv.org/abs/1906.05433 <-- climate change paper
-    https://github.com/isrugeek/climate_extreme_values
-    https://arxiv.org/abs/1905.03709 <-- with victor
-    https://github.com/ElementAI/HighRes-net
-
 </div>
 <hr>
   <div>
@@ -78,9 +117,10 @@ title: Kris Sankaran
           <td class="essay">
             <td class="essay">
               This piece explains recurrent neural networks using interactive
-              views into a one-dimensional toy example, It also highlights
+              views of a one-dimensional toy example. It also highlights
               connections between sequential processing and statistical
-              sufficiency.
+              sufficiency, and probably has the best / most pretentious title of
+              anything I've written.
               <ul>
                 <li><a href="https://observablehq.com/@krisrs1128/remembrances-of-states-past">Article</a></li>
                 <li><a href="https://github.com/krisrs1128/rnn_study">Experiments</a></li>
@@ -88,6 +128,8 @@ title: Kris Sankaran
             </td>
             <td><img src="../figure/remb_states.png" width="150"></td>
           </td>
+        </tr>
+      </table>
   </div>
 
 <hr>
@@ -123,10 +165,7 @@ title: Kris Sankaran
                 to the problem of applying dynamic regimes in the microbiome,
                 along with illustrative examples and code.
                 <ul>
-                    <li>Description:
-                        <a href="https://arxiv.org/abs/1712.00067">arxiv preprint</a>,
-                        <a href="http://statweb.stanford.edu/~kriss1/regime_detection_poster.pdf">poster</a>
-                    </li>
+                    <li>Description: <a href="https://arxiv.org/abs/1712.00067">arxiv preprint</a>, <a href="http://statweb.stanford.edu/~kriss1/regime_detection_poster.pdf">poster</a> </li>
                     <li><a href="http://github.com/krisrs1128/microbiome_regime_detection">Code</a></li>
                 </ul>
             </td>
@@ -201,7 +240,7 @@ title: Kris Sankaran
                 multitable datasets, and offer some guidelines for their
                 application to the microbiome context.
                 <ul>
-                    <li><a href="https://www.frontiersin.org/articles/10.3389/fgene.2019.00627/abstract">Paper</a></li>
+                    <li><a href="https://www.frontiersin.org/articles/10.3389/fgene.2019.00627/abstract">Article</a></li>
                     <li><a href="http://github.com/krisrs1128/multitable_review">Code</a></li>
                 </ul>
 	          </td>
@@ -296,7 +335,7 @@ title: Kris Sankaran
                 <ul>
                     <li><a href="https://arxiv.org/abs/1709.05551">Preprint</a></li>
                     <li><a href="https://dssg.uchicago.edu/project/enhancing-the-distribution-of-social-services-in-mexico/">Description</a></li>
-                    <li><a href="https://github.com/dssg/sedesol-public"Code</a></li>
+                    <li><a href="https://github.com/dssg/sedesol-public">Code</a></li>
                 </ul>
 	          </td>
 	          <td>
