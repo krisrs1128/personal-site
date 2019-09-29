@@ -1,9 +1,24 @@
----
-layout: default
-title: Kris Sankaran
----
-
-<div>
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Kris Sankaran</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/personal-site/css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+	<nav>
+	    <h1 class="title">Kris Sankaran</h1>
+	    <ul>
+	        <li><a href="/personal-site">Home</a></li>
+		<li><a href="/personal-site/projects/projects.html">Projects</a></li>
+		<li><a href="/personal-site/projects/teaching.html">Teaching</a></li>
+	    </ul>
+	</nav>
+	<hr>
+	<div class="container">
+	    <div>
     <h2 class="subtitle"> Humanitarian AI </h2>
     <h3 class="subsubtitle">Community</h3>
     <table>
@@ -15,11 +30,14 @@ title: Kris Sankaran
          coherence.
          <ul>
            <li> Workshops: I've been lucky to contribute to the organization of
-             the <a href="https://aiforsocialgood.github.io/">AI for Social Good</a>
-             workshops at ICLR and ICML, the <a href="https://cv4gc.org">Computer
-             Vision for Global Challenges workshop</a> at CVPR, and the <a
-                                                                          href="https://sites.google.com/view/ml4d/home">Machine Learning for Development</a> workshop at
-             NeurIPS. </li>
+             the <a href="https://aiforsocialgood.github.io/">AI for Social
+             Good</a> workshops at ICLR and ICML and the <a
+             href="https://cv4gc.org">Computer Vision for Global Challenges
+             workshop</a> at CVPR. I'm on the program committees for <a
+             href="https://sites.google.com/view/ml4d/home">Machine Learning for
+             Development</a> at NeurIPS and <a
+             href="https://aaai.org/Conferences/AAAI-19/aaai19emergingcall/">AI
+             for Social Impact at AAAI</a>. </li>
            <li> <a href="https://mila.quebec/en/admission/">Internships</a>: Mila hosts internships specifically
              around humanitarian AI projects, and I've been fortunate to work with
              some really wonderful students through the program. </li>
@@ -37,7 +55,38 @@ title: Kris Sankaran
        <td>
      </tr>
     </table>
-
+    <h3 class="subsubtitle"> Climate Change </h3>
+    <table>
+      <tr>
+        <td class="essay">
+          From detecting leaks in methane pipes to accounting for uncertainty in
+          future reservoir loads, machine learning has the potential to amplify
+          a wide variety of (big and small) climate change mitigation and
+          adaptation efforts.
+          <ul>
+            <li><a href="http://climatechange.ai">Climate Change AI</a>: This
+              initiative includes researchers across continents and research
+              domains, brought together by the vision of a low-carbon future
+              supported by thoughtful machine learning research and
+              applications. You should join the mailing list! </li>
+            <li><a href="https://arxiv.org/abs/1906.05433">Review paper</a>:
+              This paper provides a structure for thinking about climate change
+              and machine learning. The hope is that this taxonomy helps guide
+              closer connections between researchers in mitigation and
+              adaptation domains and methodological practitioners. </li>
+            <li>Applications</a>: Aside from the CCAI initiative, our team at
+              Mila has been investigating a few of the problems highlighted in
+              the review, including <a href="https://www.climatechange.ai/CameraReady/32/CameraReadySubmission/Multi_Component_Predictive_Maintenance.pdf/">
+              predictive maintenance</a> for wind farms, <a
+              href="https://github.com/isrugeek/climate_extreme_values"">
+              modeling extremes</a> in time series, and communication of
+              long-term <a href="https://arxiv.org/abs/1905.03709"> climate
+              change impacts </a>. </li>
+          </ul>
+        </td>
+        <td><a href="http://climatechange.ai"><img width="150" src="../figure/ccai.png"></a></td>
+      </tr>
+    </table>
     <h3 class="subsubtitle"> Remote Sensing </h3>
     <table>
       <tr>
@@ -76,38 +125,6 @@ title: Kris Sankaran
           </ul>
         </td>
         <td><img src="../figure/interactive_mapping.png" width="250"></td>
-      </tr>
-    </table>
-    <h3 class="subsubtitle"> Climate Change </h3>
-    <table>
-      <tr>
-        <td class="essay">
-          From detecting leaks in methane pipes to accounting for uncertainty in
-          future reservoir loads, machine learning has the potential to amplify
-          a wide variety of (big and small) climate change mitigation and
-          adaptation efforts.
-          <ul>
-            <li><a href="http://climatechange.ai">Climate Change AI</a>: This
-              initiative includes researchers across continents and research
-              domains, brought together by the vision of a low-carbon future
-              supported by thoughtful machine learning research and
-              applications. You should join the mailing list! </li>
-            <li><a href="https://arxiv.org/abs/1906.05433">Review paper</a>:
-              This paper provides a structure for thinking about climate change
-              and machine learning. The hope is that this taxonomy helps guide
-              closer connections between researchers in mitigation and
-              adaptation domains and methodological practitioners. </li>
-            <li>Applications</a>: Aside from the CCAI initiative, our team at
-              Mila has been investigating a few of the problems highlighted in
-              the review, including <a href="https://www.climatechange.ai/CameraReady/32/CameraReadySubmission/Multi_Component_Predictive_Maintenance.pdf/">
-              predictive maintenance</a> for wind farms, <a
-              href="https://github.com/isrugeek/climate_extreme_values"">
-              modeling extremes</a> in time series, and communication of
-              long-term <a href="https://arxiv.org/abs/1905.03709"> climate
-              change impacts </a>. </li>
-          </ul>
-        </td>
-        <td><a href="http://climatechange.ai"><img width="150" src="../figure/ccai.png"></a></td>
       </tr>
     </table>
 </div>
@@ -507,4 +524,13 @@ title: Kris Sankaran
 <hr>
 <div>
 </div>
+</html>
+
+	</div>
+	<footer>
+	    <ul>
+	        <li><a href="mailto:sankaran.kris@gmail.com">email</a></li>
+	    </ul>
+	</footer>
+    </body>
 </html>
